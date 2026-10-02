@@ -36,6 +36,7 @@ source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 pytest -v                          # everything
 pytest -v -m "not cross_layer"     # API only, no browser
+pytest -v -m cross_layer -s        # cross-layer only (uses your installed Chrome); -s shows the printed API/UI comparison
 ```
 Env vars (optional): `API_BASE_URL`, `BASE_URL`, `ONSETTO_USER`, `ONSETTO_PASS`, `ONSETTO_MFA`.
 
